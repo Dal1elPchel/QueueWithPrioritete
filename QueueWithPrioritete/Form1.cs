@@ -62,11 +62,6 @@ namespace QueueWithPrioritete
             Heap = new int[CAPACITY];
             size = 0;
             random = new Random();
-
-            for (int i = 0; i < CAPACITY; ++i)
-            {
-                Heap[i] = 0;
-            }
         }
 
         private int ParentElem(int i) => (i - 1) / 2;
@@ -124,7 +119,6 @@ namespace QueueWithPrioritete
 
         private void CreateRandQueue()
         {
-            size = 0;
 
             for (int i = 0; i < CAPACITY; ++i)
             {
@@ -137,7 +131,6 @@ namespace QueueWithPrioritete
         {
             for (int i = 0; i < size; i++)
                 Heap[i] = 0;
-            size = 0;
         }
 
         public void print(int[] a)
@@ -156,34 +149,34 @@ namespace QueueWithPrioritete
             if (4 < a.Length && a[4] != 0)
                 HeapDataGridView.Rows[2].Cells[5].Value = a[4];
 
-            if (5 < a.Length && a[5] != 0)
+            if (a[5] != 0)
                 HeapDataGridView.Rows[2].Cells[9].Value = a[5];
 
-            if (6 < a.Length && a[6] != 0)
+            if (a[6] != 0)
                 HeapDataGridView.Rows[2].Cells[13].Value = a[6];
 
-            if (7 < a.Length && a[7] != 0)
+            if (a[7] != 0)
                 HeapDataGridView.Rows[3].Cells[0].Value = a[7];
 
-            if (8 < a.Length && a[8] != 0)
+            if (a[8] != 0)
                 HeapDataGridView.Rows[3].Cells[2].Value = a[8];
 
-            if (9 < a.Length && a[9] != 0)
+            if (a[9] != 0)
                 HeapDataGridView.Rows[3].Cells[4].Value = a[9];
 
-            if (10 < a.Length && a[10] != 0)
+            if (a[10] != 0)
                 HeapDataGridView.Rows[3].Cells[6].Value = a[10];
 
-            if (11 < a.Length && a[11] != 0)
+            if (a[11] != 0)
                 HeapDataGridView.Rows[3].Cells[8].Value = a[11];
 
-            if (12 < a.Length && a[12] != 0)
+            if (a[12] != 0)
                 HeapDataGridView.Rows[3].Cells[10].Value = a[12];
 
-            if (13 < a.Length && a[13] != 0)
+            if (a[13] != 0)
                 HeapDataGridView.Rows[3].Cells[12].Value = a[13];
 
-            if (14 < a.Length && a[14] != 0)
+            if (a[14] != 0)
                 HeapDataGridView.Rows[3].Cells[14].Value = a[14];
         }
 
@@ -228,7 +221,7 @@ namespace QueueWithPrioritete
         private void ClearQueueBtn_Click(object sender, EventArgs e)
         {
             ClearQueue();
-            
+            Clear_Tab();
         }
 
         private void GetLargestBtn_Click(object sender, EventArgs e)
